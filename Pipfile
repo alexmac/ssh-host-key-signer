@@ -1,0 +1,20 @@
+[packages]
+cryptography = "*"
+botocore = "*"
+sshkey-tools = "*"
+
+[dev-packages]
+black = "*"
+isort = "*"
+pytest = "*"
+pytest-cov = "*"
+pytest-mock = "*"
+ruff = "*"
+twine = "*"
+
+[scripts]
+test = "pytest tests"
+tidy = "bash -cxe 'isort . && black . && ruff check .'"
+
+[requires]
+python_version = "3.11"
